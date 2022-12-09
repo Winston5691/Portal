@@ -27,7 +27,7 @@ Visit http://localhost:3000 to view the projects homepage. You will be required 
 ## Project Technologies
 Frontend React - npm Version 8.19.1
 ## Support and Contact Details
-This app represents the first version. In this case, it is still work in progress. In case a user encounters issues or experiences a bug, kindly feel free to reach the developer through david.ondiege@student.moringaschool.com
+This app represents the first version. In this case, it is still work in progress. In case a user encounters issues or experiences a bug, kindly feel free to reach the developer through winston.langat@student.moringaschool.com
 ## Copyright & License
 Copyright (c) 2022 Moringa School 2022 - Phase 3 - Group 2 Project. Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files , to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
