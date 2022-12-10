@@ -13,6 +13,8 @@ A WebBrowser
 Internet Connection
 ## Screenshot
 ![App ScreenShot](./client/src/images/screenshot.png)
+## Error When deploying backen caused by Ubunutu for windows(WSL)
+![App ScreenShot](./client/src/images/backenddeploymenterror.png)
 ## Deployed Work
 [DevOps app]()
 ### Run
