@@ -123,7 +123,7 @@ const Dashboard = () => {
 
         </div>
 
-{user=="student"  && (
+{user=="student" && (
   <div>
     <div>Results</div>
         <table className="table">
@@ -135,25 +135,16 @@ const Dashboard = () => {
       <th scope="col">Marks</th>
     </tr>
   </thead>
+  { student?.results?.map((result) => (
   <tbody>
-    {student?.results?.map((result) => (
-      <>
     <tr>
-      <th scope="row">1</th>
-      <td>{result.course.name}</td>
-    </tr>
-    <tr>
-      <th scope="row">2</th>
+      <th scope="row">{result.id}</th>
+      <td>{result.course?.name}</td>
       <td>{result.grade}</td>
-
+      <td>{result.percentage}%</td>
     </tr>
-    <tr>
-      <th scope="row">3</th>
-      <td>{result.marks}</td>
-    </tr>
-    </>
-))}
   </tbody>
+  ))}
         </table>
     </div>
   )}

@@ -1,6 +1,6 @@
 class StudentsController < ApplicationController
     def index 
-    student = Student.find_by(user_id: current_user&.id)
+    student = Student.find_by(id: 5)
     render json: student, status: :ok
     end
 

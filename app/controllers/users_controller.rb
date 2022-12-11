@@ -32,8 +32,8 @@ class UsersController < ApplicationController
     end 
 
 
-    def current_user
-        @current_user = User.find(doorkeeper_token)
-    end
+    # def current_user
+    #     # @current_user = User.find(doorkeeper_token)
+    # end
         
 end

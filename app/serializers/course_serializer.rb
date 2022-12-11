@@ -1,17 +1,13 @@
 # == Schema Information
 #
-# Table name: results
+# Table name: courses
 #
 #  id         :integer          not null, primary key
-#  percentage :integer
-#  course_id  :integer
+#  name       :string
+#  results_id :integer
 #  created_at :datetime         not null
 #  updated_at :datetime         not null
-#  student_id :integer
 #
-
-one:
-  percentage: 1
-
-two:
-  percentage: 1
+class CourseSerializer < ActiveModel::Serializer
+  attributes :id, :name, :created_at
+end

@@ -11,6 +11,7 @@
 #  created_at     :datetime         not null
 #  updated_at     :datetime         not null
 #  user_id        :integer
+#  results_id     :integer
 #
 class Student < ApplicationRecord
     has_many :courses
