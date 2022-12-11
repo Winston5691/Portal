@@ -6,9 +6,10 @@
 DevOps is a web application that allows students and tutors to collaborate. The main objective of the project is to provide a latform for students and tutor to interact virtually.
 The students are given a page where they can view their results wand book an appointment to meet their tutors.
 Tutors on the other end use the app to add, edit and delete results of students, courses that students are doing and view appointment requests from students. 
+## NOTE
+The deployed frontend is in the repository: https://github.com/Winston5691/portalfrontend
 
 ## Setup Requirements
-The deployed frontend is in the repository: https://github.com/Winston5691/portalfrontend
 The frontend is a replica of the client folder in this repository.
 
 To get started with the project, you will be required to clone this repository. Clone it here
@@ -21,7 +22,7 @@ Internet Connection
 ## Error When deploying backen caused by Ubunutu for windows(WSL)
 ![App ScreenShot](./client/src/images/backenddeploymenterror.png)
 ## Deployed Work
-[DevOps app]()
+The deployed frontend is in the repository: https://github.com/Winston5691/portalfrontend
 ### Run
 'npm install --prefix client'
 ### Run
