@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[7.0].define(version: 2022_12_11_084612) do
+ActiveRecord::Schema[7.0].define(version: 2022_12_11_112657) do
   create_table "appointments", force: :cascade do |t|
     t.string "name"
     t.string "note"
@@ -31,7 +31,9 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_11_084612) do
     t.integer "course_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.integer "student_id"
     t.index ["course_id"], name: "index_results_on_course_id"
+    t.index ["student_id"], name: "index_results_on_student_id"
   end
 
 # Could not dump table "students" because of following StandardError

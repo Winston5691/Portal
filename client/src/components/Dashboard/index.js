@@ -1,38 +1,52 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
 
 const Dashboard = () => {
+  const [student, setStudent] = useState([]);
+  const [tutors, setTutors] = useState([]);
+  const [appointments, setAppointments] = useState([]);
+  const [results, setResults] = useState([]);
+  const [courses, setCourses] = useState([]);
   const API_Students= "http://localhost:4000/api/students";
   const getStudents = () => {
-    return axios.get(API_Students).then((response) => response.data)
+    return axios.get(API_Students).then((response) => setStudent(response.data))
   }
-  console.log(getStudents())
+  console.log(student)
 
   const API_appointments= "http://localhost:4000/api/appointments";
   const getAppointments = () => {
-    return axios.get(API_appointments).then((response) => response.data)
+    return axios.get(API_appointments).then((response) => setAppointments(response.data))
   }
   
   const API_courses= "http://localhost:4000/api/courses";
   const getCourses = () => {
-    return axios.get(API_courses).then((response) => response.data)
+    return axios.get(API_courses).then((response) => setCourses(response.data))
   }
   
   const API_tutors= "http://localhost:4000/api/tutors";
   const getTutors = () => {
-    return axios.get(API_tutors).then((response) => response.data)
+    return axios.get(API_tutors).then((response) => setTutors(response.data))
   }
   
   const API_results= "http://localhost:4000/api/results";
   const getResults = () => {
-    return axios.get(API_results).then((response) => response.data)
+    return axios.get(API_results).then((response) => setResults(response.data))
   }
   
-  const user = "tutor"
+  useEffect(() => {
+    getResults();
+    getStudents();
+    getTutors();
+    getCourses();
+    getAppointments();
+  }, [])
+  
+
+  const user = "student"
   return (
     <div style={{backgroundColor: 'white', color:'black'}}>
-      {user=="tutor"  && (
+      {user=="tutor"  &&  (
         <div>
           <div>Students</div>
           <table className="table">
@@ -122,26 +136,23 @@ const Dashboard = () => {
     </tr>
   </thead>
   <tbody>
+    {student?.results?.map((result) => (
+      <>
     <tr>
       <th scope="row">1</th>
-      <td>Mark</td>
-      <td>Otto</td>
-      <td>@mdo</td>
+      <td>{result.course.name}</td>
     </tr>
     <tr>
       <th scope="row">2</th>
-      <td>Jacob</td>
-      <td>Thornton</td>
-      <td>@fat</td>
+      <td>{result.grade}</td>
 
     </tr>
     <tr>
       <th scope="row">3</th>
-      <td>Larry</td>
-      <td>the Bird</td>
-      <td>@twitter</td>
-
+      <td>{result.marks}</td>
     </tr>
+    </>
+))}
   </tbody>
         </table>
     </div>

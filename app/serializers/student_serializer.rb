@@ -12,10 +12,9 @@
 #  updated_at     :datetime         not null
 #  user_id        :integer
 #
-class Student < ApplicationRecord
-    has_many :courses
-    has_many :tutor
-    has_many :appointment
-    has_many :results, dependent: :destroy
-    belongs_to :user
+class StudentSerializer < ActiveModel::Serializer
+  attributes :id, :name, :email, :registration, :created_at
+  has_many :results, include_nested_associations: true
+  belongs_to :user, include_nested_associations: true
+  
 end
