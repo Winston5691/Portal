@@ -1,32 +1,34 @@
 import React from 'react';
 import axios from 'axios';
 
+
 const Dashboard = () => {
   const API_Students= "http://localhost:4000/api/students";
   const getStudents = () => {
     return axios.get(API_Students).then((response) => response.data)
   }
   console.log(getStudents())
+
   const API_appointments= "http://localhost:4000/api/appointments";
   const getAppointments = () => {
     return axios.get(API_appointments).then((response) => response.data)
   }
-  console.log(getAppointments())
+  
   const API_courses= "http://localhost:4000/api/courses";
   const getCourses = () => {
     return axios.get(API_courses).then((response) => response.data)
   }
-  console.log(getCourses())
+  
   const API_tutors= "http://localhost:4000/api/tutors";
   const getTutors = () => {
     return axios.get(API_tutors).then((response) => response.data)
   }
-  console.log(getTutors())
+  
   const API_results= "http://localhost:4000/api/results";
   const getResults = () => {
     return axios.get(API_results).then((response) => response.data)
   }
-  console.log(getResults())
+  
   const user = "tutor"
   return (
     <div style={{backgroundColor: 'white', color:'black'}}>

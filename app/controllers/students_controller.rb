@@ -1,8 +1,7 @@
 class StudentsController < ApplicationController
     def index 
-    students = Student.all
-
-    render json: students, status: :ok
+    student = Student.find_by(user_id: current_user&.id)
+    render json: student, status: :ok
     end
 
     def create

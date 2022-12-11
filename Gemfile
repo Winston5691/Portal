@@ -48,4 +48,7 @@ end
 
 
 gem "active_model_serializers", "~> 0.10.13"
-cd
+gem "rack-cors"
+gem "devise"
+gem "sqlite3"
+gem 'pry', '~> 0.13.1'
