@@ -6,8 +6,14 @@
 DevOps is a web application that allows students and tutors to collaborate. The main objective of the project is to provide a latform for students and tutor to interact virtually.
 The students are given a page where they can view their results wand book an appointment to meet their tutors.
 Tutors on the other end use the app to add, edit and delete results of students, courses that students are doing and view appointment requests from students. 
-## NOTE
-The deployed frontend is in the repository: https://github.com/Winston5691/portalfrontend
+
+#### Note:
+
+## Since I havent deployed my backedn, I have attached the backend and front end together
+## To run locally, the backend works on localhost 4000 which is changed by running rthe server using the command: rails s -p 4000
+
+
+## The backend is in the repository: https://github.com/Winston5691/portalfrontend
 
 ## Setup Requirements
 The frontend is a replica of the client folder in this repository.
