@@ -36,8 +36,21 @@ ActiveRecord::Schema[7.0].define(version: 2022_12_11_112657) do
     t.index ["student_id"], name: "index_results_on_student_id"
   end
 
-# Could not dump table "students" because of following StandardError
-#   Unknown type 'uuid' for column 'course_id'
+  create_table "students", force: :cascade do |t|
+    t.integer "course_id"
+    t.integer "appointment_id"
+    t.string "name"
+    t.string "email"
+    t.string "registration"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.integer "user_id"
+    t.integer "results_id"
+    t.index ["appointment_id"], name: "index_students_on_appointment_id"
+    t.index ["course_id"], name: "index_students_on_course_id"
+    t.index ["results_id"], name: "index_students_on_results_id"
+    t.index ["user_id"], name: "index_students_on_user_id"
+  end
 
   create_table "tutors", force: :cascade do |t|
     t.string "name"
