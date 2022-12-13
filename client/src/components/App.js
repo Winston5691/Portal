@@ -12,7 +12,7 @@ import Form from "./Form"
 import Student from './Student';
 import Dashboard from "./Dashboard"
 import LoginS from './studentlogin';
-import UpdateAppointment from './UpdateAppointment';
+// import UpdateAppointment from './UpdateAppointment';
 import { BrowserRouter, Switch, Route } from 'react-router-dom'; 
 
 
